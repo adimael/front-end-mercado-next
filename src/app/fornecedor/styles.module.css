@@ -1,0 +1,41 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formContainer {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.formButton {
+    text-align: center;
+    margin-top: 20px;
+}

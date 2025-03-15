@@ -1,0 +1,89 @@
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Título */
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.form {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos grupos de formulário */
+.formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Label */
+.label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Campos de entrada e seleção */
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botão de envio */
+.button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}

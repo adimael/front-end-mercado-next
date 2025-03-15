@@ -1,0 +1,95 @@
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Container da navbar */
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Menu de navegação */
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navList li {
+    padding: 10px;
+}
+
+.navList li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navList li a:hover {
+    color: #00bcd4;
+}
+
+/* Estilo para o item ativo */
+.active a {
+    font-weight: bold;
+    color: #00bcd4;
+    background-color:rgb(0, 26, 141);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+/* Menu hambúrguer (esconde em telas grandes) */
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menuButton {
+        display: block;
+    }
+
+    .navList {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+    }
+
+    .navList.open {
+        display: flex;
+    }
+
+    .navList li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
