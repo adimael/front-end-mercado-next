@@ -13,7 +13,7 @@ interface InputProps {
   icon?: ReactNode;
 }
 
-export default function Page({
+export default function Input({
   type = "text",
   value,
   placeholder = "",

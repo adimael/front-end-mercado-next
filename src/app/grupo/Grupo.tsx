@@ -2,7 +2,7 @@
 import styles from './styles.module.css';
 import { useSearchParams } from "next/navigation";
 
-export default function grupo(){
+export default function Grupo(){
     const dados = useSearchParams();
     const nome = dados.get('name');
     const email = dados.get('email');

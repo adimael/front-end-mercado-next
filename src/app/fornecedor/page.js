@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react';
 import styles from './styles.module.css';
-import Button from '../components/button/page';
-import Input from '../components/input/page';
+import Button from '../components/button/Button';
+import Input from '../components/input/Input';
 
 export default function Fornecedor() {
     // Estado para armazenar os dados do formulário

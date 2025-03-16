@@ -10,7 +10,7 @@ interface ButtonProps {
   icon?: ReactNode;
 }
 
-export default function Page({
+export default function Button({
   text,
   variant = "primary",
   size = "medium",
