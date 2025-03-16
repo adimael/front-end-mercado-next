@@ -35,14 +35,30 @@ Este é um projeto desenvolvido com **Next.js** que simula um sistema de mercado
 
 ### 🔹 1. Clonar o Repositório
 ```sh
-git clone https://github.com/seu-usuario/mercado-nextjs.git
-cd mercado-nextjs
+git clone https://github.com/adimael/front-end-mercado-next.git
+cd front-end-mercado-next
 ```
 
-### 🔹 3. Rodar com Docker Compose
-Caso esteja utilizando docker-compose, basta rodar:
 ```sh
-docker-compose up --build -d
+npm install
+```
+
+```sh
+npm run dev
+```
+
+## 📦 Imagem no Docker Hub
+
+### A imagem desta aplicação está disponível no Docker Hub:
+### 🔗 Docker Hub: https://hub.docker.com/r/adimael/mercado-frontend
+
+Para baixar e rodar a imagem diretamente, utilize:
+
+```sh
+docker pull seu-usuario/mercado-frontend:0.1
+docker run -p 3000:3000 seu-usuario/mercado-frontend:0.1
 ```
 #### A aplicação estará disponível em http://localhost:3000.
+
+
 
