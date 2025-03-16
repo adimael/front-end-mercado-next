@@ -48,6 +48,7 @@ npm run dev
 ```
 
 ## 📦 Imagem no Docker Hub
+![Ícone](https://raw.githubusercontent.com/adimael/front-end-mercado-next/main/prints/carrinho-de-compras.png)
 
 ### A imagem desta aplicação está disponível no Docker Hub:
 ### 🔗 Docker Hub: https://hub.docker.com/r/adimael/mercado-frontend
