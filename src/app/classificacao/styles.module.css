@@ -48,6 +48,8 @@
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
+    background-color: aliceblue;
+    color: #333;
     border-radius: 6px;
     font-size: 16px;
     transition: all 0.3s ease-in-out;

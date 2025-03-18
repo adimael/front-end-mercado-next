@@ -86,7 +86,7 @@ export default function Cliente() {
             const data = await response.json();
 
             if (response.ok) {
-                alert(`Cliente cadastrado com sucesso: ${data.nome}`);
+                alert(`Cliente cadastrado com sucesso`);
                 setFormData({ nome: '', email: '', telefone: '', endereco: '', data_nascimento: '', senha: '' });
                 setErrors({});
             } else {

@@ -30,15 +30,17 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    position: relative;
 }
 
 .navList li {
     padding: 10px;
+    position: relative;
+    cursor: pointer;
 }
 
 .navList li a {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 16px;
     transition: 0.3s;
@@ -52,12 +54,60 @@
 .active a {
     font-weight: bold;
     color: #00bcd4;
-    background-color:rgb(0, 26, 141);
-    border-radius: 10px;
-    padding: 10px 15px;
 }
 
-/* Menu hambúrguer (esconde em telas grandes) */
+/* Dropdown */
+.dropdownMenu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navList li:hover .dropdownMenu,
+.navList li:focus-within .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdownMenu li {
+    padding: 8px 12px;
+}
+
+.dropdownMenu li a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.dropdownMenu li a:hover {
+    color: #00bcd4;
+}
+
+/* Ícone do dropdown */
+.dropdownToggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdownIcon {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Menu hambúrguer (oculto em telas grandes) */
 .menuButton {
     display: none;
     background: none;
@@ -91,5 +141,21 @@
     .navList li {
         text-align: center;
         padding: 10px 0;
+    }
+
+    /* Dropdown responsivo */
+    .dropdownMenu {
+        position: static;
+        width: auto;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdownMenu li {
+        text-align: center;
+        padding: 8px 0;
     }
 }

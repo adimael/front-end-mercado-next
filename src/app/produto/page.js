@@ -10,7 +10,7 @@ export default function Venda() {
         nome: '',
         descricao: '',
         preco: '',
-        quantidade: '',
+        quantidade_estoque: '',
         id_fornecedor: ''
     });
 
@@ -30,7 +30,7 @@ export default function Venda() {
         if (!formData.nome) newErrors.nome = "O nome do produto é obrigatório.";
         if (!formData.descricao) newErrors.descricao = "A descrição é obrigatória.";
         if (!formData.preco) newErrors.preco = "O preço é obrigatório.";
-        if (!formData.quantidade) newErrors.quantidade = "A quantidade é obrigatória.";
+        if (!formData.quantidade_estoque) newErrors.quantidade_estoque = "A quantidade é obrigatória.";
         if (!formData.id_fornecedor) newErrors.id_fornecedor = "O ID do fornecedor é obrigatório.";
 
         setErrors(newErrors);
@@ -48,11 +48,13 @@ export default function Venda() {
             nome: formData.nome,
             descricao: formData.descricao,
             preco: parseFloat(formData.preco),
-            quantidade: parseInt(formData.quantidade),
+            quantidade_estoque: parseInt(formData.quantidade_estoque),
             id_fornecedor: parseInt(formData.id_fornecedor)
         };
 
         console.log("Dados formatados para envio:", JSON.stringify(formattedData, null, 2));
+
+        console.log("Dados que estão sendo enviados:", formattedData);
 
         try {
             const response = await fetch('http://ceteia.guanambi.ifbaiano.edu.br:15050/api/produto', {
@@ -67,7 +69,7 @@ export default function Venda() {
 
             if (response.ok) {
                 alert("Venda registrada com sucesso!");
-                setFormData({ id_produto: '', nome: '', descricao: '', preco: '', quantidade: '', id_fornecedor: '' });
+                setFormData({ id_produto: '', nome: '', descricao: '', preco: '', quantidade_estoque: '', id_fornecedor: '' });
                 setErrors({});
             } else {
                 console.error("Erro na API:", data);
@@ -106,8 +108,8 @@ export default function Venda() {
 
                     <div className={styles.divFormClient}>
                         <p className={styles.pForm}>Quantidade:</p>
-                        <Input type="number" name="quantidade" placeholder="Digite a quantidade..." value={formData.quantidade} onChange={handleChange} />
-                        {errors.quantidade && <p className={styles.error}>{errors.quantidade}</p>}
+                        <Input type="number" name="quantidade_estoque" placeholder="Digite a quantidade..." value={formData.quantidade_estoque} onChange={handleChange} />
+                        {errors.quantidade_estoque && <p className={styles.error}>{errors.quantidade_estoque}</p>}
                     </div>
 
                     <div className={styles.divFormClient}>
@@ -117,7 +119,7 @@ export default function Venda() {
                     </div>
 
                     <div className={styles.divButton}>
-                        <Button text='Registrar Venda' type="submit" />
+                        <Button text='Cadastrar produto' type="submit" />
                     </div>
                 </form>
             </div>

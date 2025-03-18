@@ -56,8 +56,8 @@ npm run dev
 Para baixar e rodar a imagem diretamente, utilize:
 
 ```sh
-docker pull seu-usuario/mercado-frontend:0.1
-docker run -p 3000:3000 seu-usuario/mercado-frontend:0.1
+docker pull adimael/mercado-frontend:0.2
+docker run -p 3000:3000 adimael/mercado-frontend:0.2
 ```
 #### A aplicação estará disponível em http://localhost:3000.
 

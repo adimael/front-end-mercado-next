@@ -46,7 +46,7 @@ export default function Venda() {
             const data = await response.json();
 
             if (response.ok) {
-                alert(`Venda cadastrada com sucesso! ID: ${data.id_venda}`);
+                alert(`Venda cadastrada com sucesso!`);
                 setFormData({ id_cliente: '', data_venda: '', valor_total: '' });
                 setErrors({});
             } else {
